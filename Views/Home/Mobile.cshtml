@@ -1,0 +1,46 @@
+﻿@model ResponseModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+    <h2 class="display-4">Plaka Fotoğraf: </h2>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="file" class="form-control" />
+        <button type="button" onclick="uploadFile()" class="btn btn-danger">Plaka Yükle</button>
+    </form>
+    <div class="loader" id="loader">
+        <div class="loader-wheel"></div>
+        <div class="loader-text"></div>
+    </div>
+    <div class="container p-5" align="center">
+        <div class="">
+            <b>Kamerayı Kullan:</b><br>
+            <video id="camera-stream" class="border border-3 border-danger"></video>
+        </div>
+        <div class="">
+            <button disabled id="flip-btn" class="btn btn-warning">
+                Kamera Değiştir
+            </button>
+            <button id="capture-camera" class="btn btn-primary">
+                Fotoğraf Çek
+            </button>
+            <canvas id="canvas" class="bg-light shadow border border-5 border-success" style="display:none">
+            </canvas>
+        </div>
+
+    </div>
+        <div>
+            <h2 id="message"></h2>
+        </div>
+    
+        <div >
+            <img src="" style="max-width:250px;" id="imgPlateUrl">
+            <h2 id="plate"></h2>
+        </div>
+    
+        <div>
+            <img src="" style="max-width:250px;" id="imgFileUrl">
+        </div>
+ 
+</div>
+

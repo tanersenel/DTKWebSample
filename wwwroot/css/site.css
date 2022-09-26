@@ -1,0 +1,82 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+video {
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+   
+}
+
+#canvas {
+    width: 192px;
+    height: 192px;
+}
+
+.loader {
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.loader-wheel {
+    animation: spin 1s infinite linear;
+    border: 2px solid rgba(30, 30, 30, 0.5);
+    border-left: 4px solid #fff;
+    border-radius: 50%;
+    height: 50px;
+    margin: auto;
+    width: 50px;
+}
+
+.loader-text {
+    font-family: arial, sans-serif;
+}
+
+    .loader-text:after {
+        content: 'Plaka Okunuyor ... ';
+        animation: load 2s linear infinite;
+    }
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load {
+    0% {
+        content: 'Plaka Okunuyor';
+    }
+
+    33% {
+        content: 'Plaka Okunuyor.';
+    }
+
+    67% {
+        content: 'Plaka Okunuyor..';
+    }
+
+    100% {
+        content: 'Plaka Okunuyor...';
+    }
+}
